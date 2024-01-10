@@ -1,0 +1,18 @@
+package Day11_121223;
+
+import Day10_121123.Reusable_Methods;
+import org.openqa.selenium.WebDriver;
+
+public class T2_Reusable_Yahoo {
+    public static void main(String[] args) {
+        //instantiate the driver
+        WebDriver driver = Reusable_Methods.setUpDriver();
+        //navigate to metlife
+        driver.navigate().to("https://www.yahoo.com/");
+
+        //click on the sports menu (third tab, index 2)
+        Reusable_Methods.clickByIndexMethod(driver, "//*[contains(@class,'_yb_q22uj')]", 2, "yahoo headers");
+        //quit driver
+        driver.quit();
+    }//end of main
+}
